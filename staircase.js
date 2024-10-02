@@ -21,12 +21,17 @@
  * @param {number} n 樓梯的樓層數以及底層的個數
  */
 function staircase(n) {
+  // method 1:
   Array.from({length: n}, (_, i) =>
     console.log(
       Array.from({length: i + 1})
         .fill('#')
         .join('')
-        .padStart(6)
+        .padStart(n)
     )
   );
+  // method 2:
+  for (let i = 1; i < n + 1; i++) {
+    console.log('#'.repeat(i).padStart(n));
+  }
 }
