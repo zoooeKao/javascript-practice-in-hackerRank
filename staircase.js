@@ -1,0 +1,32 @@
+// - Function Description
+// Complete the staircase function in the editor below.
+// staircase has the following parameter(s):
+// int n: an integer
+// Print
+// Print a staircase as described above.
+
+// - Input Format
+// A single integer, , denoting the size of the staircase.
+
+// - Output Format
+// Print a staircase of size  using # symbols and spaces.
+// Note: The last line must have  spaces in it.
+
+/*
+ * Complete the 'staircase' function below.
+ * The function accepts INTEGER n as parameter.
+ */
+
+/**
+ * @param {number} n 樓梯的樓層數以及底層的個數
+ */
+function staircase(n) {
+  Array.from({length: n}, (_, i) =>
+    console.log(
+      Array.from({length: i + 1})
+        .fill('#')
+        .join('')
+        .padStart(6)
+    )
+  );
+}
