@@ -19,6 +19,9 @@
  * The function accepts INTEGER_ARRAY grades as parameter.
  */
 
+/**
+ * @param {[]} grades
+ */
 function gradingStudents(grades) {
   return grades.map((grade) => {
     if (grade < 38) {
@@ -35,7 +38,4 @@ function gradingStudents(grades) {
   });
 }
 
-gradingStudents(73); //=> 75
-gradingStudents(67); //=> 67
-gradingStudents(38); //=> 40
-gradingStudents(33); //=> 33
+gradingStudents([73, 67, 38, 33]); //=> [ 75, 67, 40, 33 ]
