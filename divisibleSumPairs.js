@@ -25,7 +25,7 @@
  * @param {number} n ar的長度
  * @param {number} k 除數
  * @param {array[number]} ar
- * @returns 可以配對成功整除k的組數
+ * @returns {number} 可以配對成功整除k的組數
  */
 function divisibleSumPairs(n, k, ar) {
   let count = 0;
