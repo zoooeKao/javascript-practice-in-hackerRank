@@ -28,10 +28,7 @@ function sockMerchant(n, ar) {
     } else {
       statisticTable[sockNo] += 1;
     }
-  }
-
-  if (statisticTable[sockNo] % 2 === 0) {
-    pairs++;
+    if (statisticTable[sockNo] % 2 === 0) pairs++;
   }
 
   return pairs;
