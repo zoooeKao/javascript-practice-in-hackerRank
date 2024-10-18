@@ -33,22 +33,25 @@
  */
 
 /**
- * @param {number} steps 上坡及下坡的次數
+ * @param {number} steps 總步數
  * @param {number[]} path 紀錄上坡及下坡
- * @returns 統計經過山谷的次數
+ * @returns {number} 統計經過山谷的次數
  */
 function countingValleys(steps, path) {
-  let seaLevel = 0;
-  let valleys = 0;
-  for (const step of path) {
-    if (step === 'U') {
-      seaLevel++;
-      if (seaLevel === 0) {
-        valleys++;
+  let altitude = /** @type {number} */ (0);
+  let numberOfValleys = /** @type {number} */ (0);
+
+  for (const track of path) {
+    if (track === 'D') {
+      altitude = altitude - 1;
+    }
+    if (track === 'U') {
+      altitude = altitude + 1;
+      if (altitude === 0) {
+        numberOfValleys += 1;
       }
-    } else {
-      seaLevel--;
     }
   }
-  return valleys;
+
+  return numberOfValleys;
 }
