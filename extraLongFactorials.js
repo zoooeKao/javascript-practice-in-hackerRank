@@ -9,13 +9,13 @@
  */
 
 /**
+ * 計算 n 階的結果
  * @param {number} n 原始資料
- * @returns {number} n階的結果
  */
 function extraLongFactorials(n) {
-  let result = n;
-  for (let i = 1; i < n; i++) {
-    result = result * (n - i);
+  let result = BigInt(1);
+  for (let i = 1; i <= n; i++) {
+    result = result * BigInt(i);
   }
-  return result;
+  console.log(result.toString());
 }
